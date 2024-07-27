@@ -12,13 +12,15 @@ $(document).ready(function(){
         {
           breakpoint: 620,
           settings: {
-          arrows: false
+          arrows: false,
+          adaptiveHeight: true
           }
         },
         {
           breakpoint: 345,
           settings: {
-          arrows: false
+          arrows: false,
+          adaptiveHeight: true
           }
         }
         ]
@@ -31,17 +33,40 @@ $(document).ready(function(){
 
   worksButton.addEventListener("click", worksToggle);
 
+  var moreInfo = document.getElementById("more-info");
+  var projects = document.getElementById("projects");
+
   function worksToggle() {
     var projects = document.getElementById("projects");
 
-    if (projects.style.display == "block") {
-      projects.style.display = "none";
+    if (projects.style.opacity == "0") {
+      projects.style.opacity = "1";
       projects.style.zIndex = "100";
-      worksButton.style.color = "#EC825B";
-    } else {
-      projects.style.display = "block";
       worksButton.style.color = "#DCDCDCDC";
+      // worksButton.addEventListener("mouseenter", (x) => {
+      //   worksButton.innerHTML = 'X';
+      // });
+      // worksButton.addEventListener("mouseleave", (Works) => {
+      //   worksButton.innerHTML = 'Works';
+      // });
+    } else {
+      projects.style.opacity = "0";
+      worksButton.style.color = "#EC825B";
     }
+
+    var mobileView = window.matchMedia("(max-width: 640px)")
+
+    function mobileProjectsToggle(mobileView) {
+      if (mobileView.matches) { // If media query matches
+        if (projects.style.display == "block") {
+          moreInfo.style.display = "none";
+        } else if (moreInfo.style.display == "none") {
+          moreInfo.style.display = "block";
+        }
+      } 
+    }
+  
+    mobileProjectsToggle(mobileView);
   };
 
   const infoButton = document.querySelector(".info");
@@ -50,17 +75,27 @@ $(document).ready(function(){
 
   function infoToggle() {
     var moreInfo = document.getElementById("more-info");
-    if (moreInfo.style.display == "block") {
-      moreInfo.style.display = "none";
+    if (moreInfo.style.opacity == "1") {
+      moreInfo.style.opacity = "0";
       infoButton.style.color = "#EC825B";
     } else {
-      moreInfo.style.display = "block";
+      moreInfo.style.opacity = "1";
       infoButton.style.color = "#DCDCDCDC";
     }
+
+    var mobileView = window.matchMedia("(max-width: 640px)")
+
+    function mobileInfoToggle(mobileView) {
+      if (mobileView.matches) { // If media query matches
+        if (moreInfo.style.display == "block") {
+          projects.style.display = "none";
+        } else if (moreInfo.style.display == "none") {
+          projects.style.display = "block";
+        }
+      } 
+    }
+  
+    mobileInfoToggle(mobileView);
   };
 
-//   function hoverColor {
-//     if (worksButton.style.color = "#EC825B") {
-
-//     }
-//   }
+  

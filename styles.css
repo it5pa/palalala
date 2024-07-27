@@ -32,14 +32,61 @@ a {
     color: #9370DB;
 }
 
-.works, .info {
+.email {
+    position: relative;
+    width: 18.9vw;
+}
+.email p{
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.email a{
+    color: #9370DB;
+}
+
+.email p:hover {
+    color:#DCDCDCDC;
+    cursor: pointer;
+}
+
+.email:hover .email-info{
+    opacity: 1;
+}
+
+.email-info {
+    opacity: 0;
+    position: absolute;
+    margin-top: 2px;
+    transition: opacity 0.3s;
+}
+
+
+.email-info li{
+    text-align: right;
+    padding: 1px 0;
+}
+
+#write {
+    color:#EC825B
+}
+
+.works {
+    color: #DCDCDCDC
+}
+
+.info {
     color: #EC825B;
-    width: 20px;
-    height: 20px;
+}
+.works, .info {
+    width: 40px;
+    height: 10px;
 }
 
 .works:hover, .info:hover {
     color:#DCDCDCDC !important;
+    cursor: pointer;
 }
 
 .works a, .info a {
@@ -52,10 +99,13 @@ a {
     position: fixed;
     margin-top: 30px;
     width: 60vw;
+    overflow: scroll;
 }
 
 #more-info {
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .more-info p {
@@ -97,45 +147,13 @@ li a {
 li a:hover {
     color:#EC825B;
 }
-
-@media screen and (max-width:800px){
-    .more-info {
-        width: 92vw;
-        margin-top: 50px;
-    }   
-
-    .more-info p {
-        line-height: 1rem;
-    }
-
-    .header {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        justify-content: unset;
-    }
-
-    #projects {
-        margin: auto;
-    }
-/* 
-    .project img {
-        width: 100%;
-    } */
-    
-    .slick-track {
-        height: 50vh;
-    }
-
-    .project-container {
-        width: 100%;
-    }
-}
   
 /* projects */
 
 #projects {
-    display: block;
-    /* position: absolute; */
+    /* display: block; */
+    opacity: 1;
+    transition: opacity 0.3s;
     top: 30px;
     width: 95%;
     z-index: 0;
@@ -149,6 +167,7 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    text-align: center;
 }
 
 /* slider */
@@ -173,11 +192,15 @@ button {
 .caption p {
     margin: 0;
     padding-top: 0;
-    padding-bottom: 5px;
+    padding-bottom: 3.5px;
     font-size: 0.8rem;
     position: relative;
     text-align: center;
     color:#9370DB;
+}
+
+.caption #details {
+    color: #808080;
 }
 
 .slick-track {  
@@ -210,7 +233,74 @@ button {
 } */
 
 @media only screen and (max-width: 640px) {
+
+    /* header */
+    .header {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        justify-content: unset;
+    }
+
+    .more-info {
+        width: 92vw;
+        margin-top: 10px;
+        position: unset;
+    }   
+
+    .more-info p {
+        line-height: 1rem;
+    }
+
+    .email {
+        position: unset;
+        width: unset;
+    }
+    .email p{
+        padding: 0;
+        margin: 0;
+        text-align: unset;
+    }
+    
+    .email a{
+        color: #9370DB;
+    }
+    
+    .email p:hover {
+        color:#DCDCDCDC;
+        cursor: pointer;
+    }
+    
+    .email:hover .email-info{
+        opacity: 0;
+    }
+    
+    /* .email-info {
+        opacity: 0;
+        position: absolute;
+        margin-top: 2px;
+        transition: opacity 0.3s;
+    }
+    
+    
+    .email-info li{
+        text-align: right;
+        padding: 1px 0;
+    } */
+
     .slick-track {  
         height: fit-content;
     }  
+
+    #projects {
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    .project-container {
+        width: 100%;
+    }
+
+    .caption p {
+    color: #808080;
+    } 
 }
