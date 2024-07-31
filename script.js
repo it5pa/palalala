@@ -5,7 +5,7 @@ $(document).ready(function(){
       draggable: true,
       infinite: true,
       slidesToShow: 1,
-      speed: 100,
+      speed: 150,
       fade: true,
       cssEase: 'linear',
       responsive: [
@@ -50,6 +50,7 @@ $(document).ready(function(){
       //   worksButton.innerHTML = 'Works';
       // });
     } else {
+      projects.style.pointerEvents = "none";
       projects.style.opacity = "0";
       worksButton.style.color = "#EC825B";
     }

@@ -18,6 +18,16 @@ a {
     text-decoration: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color:#EC825B;
+    background: #29281C;
+  }
+  
+  ::selection {
+    color:#EC825B;
+    background: #29281C;
+  }
+
 /* header */
 
 .header {
@@ -58,14 +68,14 @@ a {
 .email-info {
     opacity: 0;
     position: absolute;
-    margin-top: 2px;
+    /* margin-top: 2px; */
     transition: opacity 0.3s;
 }
 
 
 .email-info li{
     text-align: right;
-    padding: 1px 0;
+    /* padding: 1px 0; */
 }
 
 #write {
@@ -156,7 +166,7 @@ li a:hover {
     transition: opacity 0.3s;
     top: 30px;
     width: 95%;
-    z-index: 0;
+    pointer-events: unset;
 }
 
 button {
@@ -176,7 +186,7 @@ button {
     margin: auto;
     width: 80%;
     margin-top: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .project {
@@ -190,7 +200,8 @@ button {
 }
 
 .caption p {
-    margin: 0;
+    margin: auto;
+    width: 44vw;
     padding-top: 0;
     padding-bottom: 3.5px;
     font-size: 0.8rem;
@@ -199,8 +210,12 @@ button {
     color:#9370DB;
 }
 
-.caption #details {
+
+.caption #details, #description {
     color: #808080;
+    padding-bottom: 0;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
 }
 
 .slick-track {  
