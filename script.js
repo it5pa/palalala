@@ -41,7 +41,7 @@ $(document).ready(function(){
 
     if (projects.style.opacity == "0") {
       projects.style.opacity = "1";
-      projects.style.zIndex = "100";
+      projects.style.pointerEvents = "unset";
       worksButton.style.color = "#DCDCDCDC";
       // worksButton.addEventListener("mouseenter", (x) => {
       //   worksButton.innerHTML = 'X';
@@ -78,9 +78,11 @@ $(document).ready(function(){
     var moreInfo = document.getElementById("more-info");
     if (moreInfo.style.opacity == "1") {
       moreInfo.style.opacity = "0";
+      moreInfo.style.pointerEvents = "none";
       infoButton.style.color = "#EC825B";
     } else {
       moreInfo.style.opacity = "1";
+      moreInfo.style.pointerEvents = "unset";
       infoButton.style.color = "#DCDCDCDC";
     }
 
