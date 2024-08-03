@@ -4,9 +4,8 @@
 }
 
 body {
-    font-family: 'Hershey';
-    background: #29281C;
     font-family: 'Hershey-Futural-30', sans-serif;
+    background: #29281C;
     color: #DCDCDCDC;
     font-size: 0.8rem;
     margin: 3vh 2vw 3vh 2vw;
@@ -203,8 +202,8 @@ button {
 .caption p {
     margin: auto;
     width: 44vw;
-    padding-top: 0;
-    padding-bottom: 3.5px;
+    padding-top: 1px;
+    padding-bottom: 3px;
     font-size: 0.8rem;
     position: relative;
     text-align: center;
@@ -216,7 +215,7 @@ button {
     color: #808080;
     padding-bottom: 0;
     font-size: 0.7rem;
-    line-height: 0.9rem;
+    line-height: 0.8rem;
 }
 
 .slick-track {  
