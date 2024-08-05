@@ -35,22 +35,26 @@ $(document).ready(function(){
 
   var moreInfo = document.getElementById("more-info");
   var projects = document.getElementById("projects");
+  var mobileView = window.matchMedia("(max-width: 640px)")
+  const infoButton = document.querySelector(".info");
+
+  if (mobileView.matches) { 
+    worksButton.innerHTML = "Works & More";
+    worksButton.style.width = "unset";
+    infoButton.style.display = "none";
+  };
 
   function worksToggle() {
     var projects = document.getElementById("projects");
 
     if (projects.style.opacity == "0") {
       projects.style.opacity = "1";
+      projects.style.display = "block"
       projects.style.pointerEvents = "unset";
       worksButton.style.color = "#DCDCDCDC";
-      // worksButton.addEventListener("mouseenter", (x) => {
-      //   worksButton.innerHTML = 'X';
-      // });
-      // worksButton.addEventListener("mouseleave", (Works) => {
-      //   worksButton.innerHTML = 'Works';
-      // });
     } else {
       projects.style.pointerEvents = "none";
+      projects.style.display = "none"
       projects.style.opacity = "0";
       worksButton.style.color = "#EC825B";
     }
@@ -58,19 +62,19 @@ $(document).ready(function(){
     var mobileView = window.matchMedia("(max-width: 640px)")
 
     function mobileProjectsToggle(mobileView) {
+
       if (mobileView.matches) { // If media query matches
         if (projects.style.display == "block") {
           moreInfo.style.display = "none";
-        } else if (moreInfo.style.display == "none") {
+        } else if (projects.style.display == "none") {
           moreInfo.style.display = "block";
-        }
+        } 
       } 
     }
   
     mobileProjectsToggle(mobileView);
   };
 
-  const infoButton = document.querySelector(".info");
 
   infoButton.addEventListener("click", infoToggle);
 
@@ -78,10 +82,12 @@ $(document).ready(function(){
     var moreInfo = document.getElementById("more-info");
     if (moreInfo.style.opacity == "1") {
       moreInfo.style.opacity = "0";
+      moreInfo.style.display = "none"
       moreInfo.style.pointerEvents = "none";
       infoButton.style.color = "#EC825B";
     } else {
       moreInfo.style.opacity = "1";
+      moreInfo.style.display = "block"
       moreInfo.style.pointerEvents = "unset";
       infoButton.style.color = "#DCDCDCDC";
     }
@@ -90,12 +96,14 @@ $(document).ready(function(){
 
     function mobileInfoToggle(mobileView) {
       if (mobileView.matches) { // If media query matches
-        if (moreInfo.style.display == "block") {
+        var moreInfo = document.getElementById("more-info");
+        if (projects.style.display == "block") {
+          moreInfo.style.display = "block";
           projects.style.display = "none";
-        } else if (moreInfo.style.display == "none") {
-          projects.style.display = "block";
+        } else {
+          moreInfo.style.display = "block";
         }
-      } 
+      }
     }
   
     mobileInfoToggle(mobileView);

@@ -115,6 +115,7 @@ a {
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
+    display: none;
 }
 
 .more-info p {
@@ -160,7 +161,7 @@ li a:hover {
 /* projects */
 
 #projects {
-    /* display: block; */
+    display: block;
     opacity: 1;
     transition: opacity 0.3s;
     top: 30px;
@@ -256,15 +257,18 @@ button {
     .header {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
+        grid-column-gap: 22vw;
         justify-content: unset;
     }
 
     #more-info {
         display: none;
+        opacity: unset;
     }
 
     #projects {
         display: block;
+        opacity: unset;
     }
 
     .more-info {
