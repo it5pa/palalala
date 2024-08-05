@@ -52,24 +52,23 @@ $(document).ready(function(){
       projects.style.opacity = "1";
       projects.style.display = "block"
       projects.style.pointerEvents = "unset";
-      worksButton.style.color = "#DCDCDCDC";
+      worksButton.style.color = "#DCDCDC"
     } else {
       projects.style.pointerEvents = "none";
       projects.style.display = "none"
       projects.style.opacity = "0";
-      worksButton.style.color = "#EC825B";
+      worksButton.style.color = "#EC825B"
     }
 
     var mobileView = window.matchMedia("(max-width: 640px)")
 
     function mobileProjectsToggle(mobileView) {
-      worksButton.style.color = "#DCDCDCDC";
       if (mobileView.matches) { // If media query matches
         if (projects.style.display == "block") {
           moreInfo.style.display = "none";
-          worksButton.style.color = "#EC825B";
         } else if (projects.style.display == "none") {
           moreInfo.style.display = "block";
+          worksButton.style.color = "#EC825B";
         } 
       } 
     }
@@ -93,22 +92,6 @@ $(document).ready(function(){
       moreInfo.style.pointerEvents = "unset";
       infoButton.style.color = "#DCDCDCDC";
     }
-
-    var mobileView = window.matchMedia("(max-width: 640px)")
-
-    function mobileInfoToggle(mobileView) {
-      if (mobileView.matches) { // If media query matches
-        var moreInfo = document.getElementById("more-info");
-        if (projects.style.display == "block") {
-          moreInfo.style.display = "block";
-          projects.style.display = "none";
-        } else {
-          moreInfo.style.display = "block";
-        }
-      }
-    }
-  
-    mobileInfoToggle(mobileView);
   };
 
   
