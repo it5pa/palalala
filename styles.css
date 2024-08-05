@@ -1,10 +1,12 @@
 @font-face {
     font-family: "Hershey-Futural-30";
-    src: url("./assets/fonts/Hershey-Futural-30.ttf") format("ttf");
+    src: url("./assets/fonts/Hershey-Futural-30.ttf") format("ttf"),
+         url("./assets/fonts/Hershey-Futural-30.woff") format("woff"),
+         url("./assets/fonts/Hershey-Futural-30.woff2") format("woff2");
 }
 
 body {
-    font-family: 'Hershey-Futural-30', sans-serif;
+    font-family: "Hershey-Futural-30", sans-serif;
     background: #29281C;
     color: #DCDCDCDC;
     font-size: 0.8rem;
@@ -257,8 +259,12 @@ button {
     .header {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        grid-column-gap: 22vw;
         justify-content: unset;
+    }
+    
+    .works {
+        color: #EC825B;
+        text-align: right;
     }
 
     #more-info {
@@ -289,6 +295,7 @@ button {
         padding: 0;
         margin: 0;
         text-align: unset;
+        color:#DCDCDCDC;
     }
     
     .email a{

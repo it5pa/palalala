@@ -42,6 +42,7 @@ $(document).ready(function(){
     worksButton.innerHTML = "Works & More";
     worksButton.style.width = "unset";
     infoButton.style.display = "none";
+    worksButton.style.color = "#EC825B";
   };
 
   function worksToggle() {
@@ -62,10 +63,11 @@ $(document).ready(function(){
     var mobileView = window.matchMedia("(max-width: 640px)")
 
     function mobileProjectsToggle(mobileView) {
-
+      worksButton.style.color = "#DCDCDCDC";
       if (mobileView.matches) { // If media query matches
         if (projects.style.display == "block") {
           moreInfo.style.display = "none";
+          worksButton.style.color = "#EC825B";
         } else if (projects.style.display == "none") {
           moreInfo.style.display = "block";
         } 
