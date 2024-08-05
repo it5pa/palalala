@@ -60,19 +60,18 @@ $(document).ready(function(){
       worksButton.style.color = "#EC825B"
     }
 
-    var mobileView = window.matchMedia("(max-width: 640px)")
-
     function mobileProjectsToggle(mobileView) {
+      var mobileView = window.matchMedia("(max-width: 640px)")
       if (mobileView.matches) { // If media query matches
         if (projects.style.display == "block") {
           moreInfo.style.display = "none";
         } else if (projects.style.display == "none") {
           moreInfo.style.display = "block";
           worksButton.style.color = "#EC825B";
+          moreInfo.style.pointerEvents = "unset";
         } 
       } 
     }
-  
     mobileProjectsToggle(mobileView);
   };
 
