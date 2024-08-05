@@ -112,10 +112,9 @@ a {
 }
 
 #more-info {
-    /* display: none; */
     opacity: 0;
     transition: opacity 0.3s;
-    pointer-events: unset;
+    pointer-events: none;
 }
 
 .more-info p {
@@ -215,7 +214,7 @@ button {
     color: #808080;
     padding-bottom: 0;
     font-size: 0.7rem;
-    line-height: 0.8rem;
+    line-height: 0.9rem;
 }
 
 .slick-track {  
@@ -247,6 +246,10 @@ button {
     width: 100%;
 } */
 
+#neyeyeght img{
+    width: 450px;
+}
+
 @media only screen and (max-width: 640px) {
 
     /* header */
@@ -254,6 +257,14 @@ button {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         justify-content: unset;
+    }
+
+    #more-info {
+        display: none;
+    }
+
+    #projects {
+        display: block;
     }
 
     .more-info {
@@ -317,5 +328,17 @@ button {
 
     .caption p {
     color: #808080;
+    width: unset;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     } 
+
+    #details, #description {
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    }
+
+    #neyeyeght img{
+        width: 100%;
+    }
 }
