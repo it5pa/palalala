@@ -546,7 +546,7 @@ button {
         /* margin-right: 21px; */
         padding-right: px;
         margin-top: -50px;
-        padding-top: 35px;
+        padding-top: 0px;
         padding-left: 9px;
         /* padding-bottom: 30px; */
         grid-template-columns: 1fr;
