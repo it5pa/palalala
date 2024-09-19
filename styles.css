@@ -487,6 +487,7 @@ button {
         overflow-y: scroll;
         z-index: 10;
         padding-top: 20px;
+        padding-left: 9px;
         /* padding: 20px 8px; */
         width: 100vw;
     }
