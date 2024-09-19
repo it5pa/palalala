@@ -2,12 +2,14 @@
   const worksButton = document.querySelector(".works");
   const otherButton = document.querySelector(".other");
   const infoButton = document.querySelector(".info");
-  const infoButtonMobile = document.querySelector(".info-mobile")
+  const infoButtonMobile = document.querySelector(".info-mobile");
+  const closeButton = document.querySelector(".close");
 
   worksButton.addEventListener("click", worksToggle);
   otherButton.addEventListener("click", otherToggle);
   infoButton.addEventListener("click", infoToggle);
   infoButtonMobile.addEventListener("click", infoToggleMobile);
+  closeButton.addEventListener("click", closeToggle);
 
 
   var moreInfo = document.querySelector(".more-info");
@@ -44,12 +46,27 @@
       moreInfo.classList.toggle("show-more-info");
       infoButtonMobile.style.color = "#DCDCDC";
       document.querySelector(".info-container").style.backgroundColor = "unset";
+      document.querySelector(".header-container").style.display = "flex";
+      document.querySelector(".voicememos").style.display = "inherit";
     } else {
       moreInfo.classList.toggle("show-more-info");
       infoButtonMobile.style.color = "#7ae423";
       document.querySelector(".info-container").style.backgroundColor = "#82816d";
+      document.querySelector(".header-container").style.display = "none";
+      document.querySelector(".voicememos").style.display = "none";
     }
   };
+
+  function closeToggle() {
+    if (moreInfo.classList.contains("show-more-info")) {
+      moreInfo.classList.toggle("show-more-info");
+      infoButtonMobile.style.color = "#DCDCDC";
+      document.querySelector(".info-container").style.backgroundColor = "unset";
+      document.querySelector(".header-container").style.display = "flex";
+      document.querySelector(".voicememos").style.display = "inherit";
+    } 
+  };
+
 
 
   function otherToggle() {

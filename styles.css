@@ -518,6 +518,11 @@ button {
         width: 91vw;
     }
 
+    .close {
+        color:#7ae423;
+        padding-top: 10px;
+    }
+
     .info-mobile {
         display: block;
         position: fixed;
@@ -531,22 +536,11 @@ button {
         padding-right: 0;
     }
 
-    /* .more-info {
-        background-color: #82816d;
-        position: fixed;
-        height: 100%;
-        width: 96%;
-        margin-bottom: 20px;
-        z-index: 999;
-        margin-top: 0;
-        grid-template-columns: 1fr;
-    } */
-
     .more-info{
         background-color: #82816d;
         position: fixed;
         height: 100%;
-        width: 97%;
+        width: 98%;
         margin-bottom: 20px;
         z-index: 999;
         /* margin-right: 21px; */
