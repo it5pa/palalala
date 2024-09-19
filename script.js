@@ -43,9 +43,13 @@
     if (moreInfo.classList.contains("show-more-info")) {
       moreInfo.classList.toggle("show-more-info");
       infoButtonMobile.style.color = "#DCDCDC";
+      document.querySelector(".info-container").style.backgroundColor = "unset";
+      document.querySelector(".info-container").style.mixBlendMode = "unset";
     } else {
       moreInfo.classList.toggle("show-more-info");
       infoButtonMobile.style.color = "#7ae423";
+      document.querySelector(".info-container").style.backgroundColor = "#82816d";
+      document.querySelector(".info-container").style.mixBlendMode = "difference";
     }
   };
 

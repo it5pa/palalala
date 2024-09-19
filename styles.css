@@ -471,7 +471,7 @@ button {
         bottom: 15px;
     }
 
-    .info-container {
+    /* .info-container {
         background-color: #82816d;
         mix-blend-mode: difference;
         position: absolute;
@@ -480,6 +480,15 @@ button {
         z-index: 10;
         padding: 20px 8px;
         width: 95vw;
+    } */
+
+    .info-container {
+        position: absolute;
+        overflow-y: scroll;
+        z-index: 10;
+        padding-top: 20px;
+        /* padding: 20px 8px; */
+        width: 100vw;
     }
 
     .info {
@@ -510,7 +519,7 @@ button {
         padding-right: 0;
     }
 
-    .more-info {
+    /* .more-info {
         background-color: #82816d;
         position: fixed;
         height: 100%;
@@ -519,10 +528,26 @@ button {
         z-index: 999;
         margin-top: 0;
         grid-template-columns: 1fr;
+    } */
+
+    .more-info{
+        background-color: #82816d;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+        z-index: 999;
+        margin-top: -50px;
+        padding-top: 35px;
+        grid-template-columns: 1fr;
     }
 
     .col2 {
         padding-bottom: 100px;
+    }
+
+    .more-info {
+        background-color: #82816d;
     }
 
     .more-info p{
