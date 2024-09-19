@@ -348,10 +348,14 @@ button {
     color: #DCDCDCDC;
 }
 
+.other-caption {
+    margin-top: 10px;
+    width: 100%;
+}
+
 .other-caption p{
         color: #DCDCDCDC;
-        width: 100%;
-        margin: auto;
+        margin: 5px;
         padding-top: 1px;
         padding-bottom: 3px;
         font-size: 0.8rem;
@@ -359,9 +363,6 @@ button {
         text-align: center;
 }
 
-.other-caption {
-    margin-top: 10px;
-}
 
 .other-caption a{
     color:#7ae423;
@@ -615,13 +616,13 @@ button {
     }
 
     .other-caption {
-        margin-top: 5px;
         font-size: 10.5px;
     }
 
     .other-caption p {
         color:#740d80;
         font-size: 10.5px !important; 
+        margin-top: 5px;
     }
 
     #project-grid-1, #project-grid-2, #project-grid-3{
