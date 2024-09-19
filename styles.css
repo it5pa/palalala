@@ -564,7 +564,10 @@ button {
     }
     
     .other-inner {
-        padding: 70px 20px;
+        padding-top: 80px;
+        padding-bottom: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .other-img {
@@ -577,6 +580,7 @@ button {
 
     #other-caption p {
         color:#740d80;
+        font-size: 0.65rem;
     }
 
     #project-grid-1, #project-grid-2, #project-grid-3{
