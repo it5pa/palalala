@@ -472,6 +472,7 @@ button {
     }
 
     .info-container {
+        mix-blend-mode: difference;
         position: absolute;
         overflow-y: scroll;
         z-index: 10;
@@ -498,7 +499,7 @@ button {
         display: block;
         position: fixed;
         bottom: 15px;
-        left: 10px;
+        left: 9px;
         z-index: 999999;
     }
 
