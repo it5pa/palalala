@@ -348,9 +348,27 @@ button {
     color: #DCDCDCDC;
 }
 
-#other-caption p{
+.other-caption p{
         color: #DCDCDCDC;
         width: 100%;
+        margin: auto;
+        padding-top: 1px;
+        padding-bottom: 3px;
+        font-size: 0.8rem;
+        position: relative;
+        text-align: center;
+}
+
+.other-caption {
+    margin-top: 10px;
+}
+
+.other-caption a{
+    color:#7ae423;
+}
+
+.other-caption a:hover{
+    color:#dcdcdc;
 }
 
 #img-width {
@@ -602,12 +620,12 @@ button {
         height: 500px;
     }
 
-    #other-caption {
+    .other-caption {
         margin-top: 5px;
         font-size: 10.5px;
     }
 
-    #other-caption p {
+    .other-caption p {
         color:#740d80;
         font-size: 10.5px;
     }
