@@ -472,9 +472,11 @@ button {
     }
 
     .info-container {
+        background-color: #82816d;
         mix-blend-mode: difference;
         position: absolute;
         overflow-y: scroll;
+        margin-top: -20px;
         z-index: 10;
         padding: 20px 8px;
         width: 95vw;
@@ -509,6 +511,7 @@ button {
     }
 
     .more-info {
+        background-color: #82816d;
         position: fixed;
         height: 100%;
         width: 96%;
@@ -544,7 +547,7 @@ button {
 
     .caption p {
         width: 95vw;
-        font-size: 0.65rem;
+        font-size: 10.5px;
         line-height: auto;
         margin: auto;
         text-align: center;
@@ -582,7 +585,7 @@ button {
 
     #other-caption p {
         color:#740d80;
-        font-size: 0.65rem;
+        font-size: 10.5px;
     }
 
     #project-grid-1, #project-grid-2, #project-grid-3{
