@@ -471,25 +471,17 @@ button {
         bottom: 15px;
     }
 
-    /* .info-container {
-        background-color: #82816d;
-        mix-blend-mode: difference;
-        position: absolute;
-        overflow-y: scroll;
-        margin-top: -20px;
-        z-index: 10;
-        padding: 20px 8px;
-        width: 95vw;
-    } */
-
     .info-container {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
         overflow-y: scroll;
         z-index: 10;
-        padding-top: 20px;
-        padding-left: 9px;
+        padding-top: 50px;
+        padding-left: 0px;
         /* padding: 20px 8px; */
-        width: 100vw;
+        width: 100%;
+        z-index: 12;
     }
 
     .info {
@@ -503,8 +495,9 @@ button {
     .name-mobile {
         display: block;
         color:#960909;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        width: 91vw;
     }
 
     .info-mobile {
@@ -535,11 +528,15 @@ button {
         background-color: #82816d;
         position: fixed;
         height: 100%;
-        width: 100%;
+        width: 97%;
         margin-bottom: 20px;
         z-index: 999;
+        /* margin-right: 21px; */
+        padding-right: px;
         margin-top: -50px;
         padding-top: 35px;
+        padding-left: 9px;
+        /* padding-bottom: 30px; */
         grid-template-columns: 1fr;
     }
 
@@ -564,9 +561,9 @@ button {
         display: flex;
         top: 0;
         left: 0;
-        width: 92%;
+        width: 96%;
         justify-content: space-between;
-        padding-left: 15px;
+        padding-left: 9px;
         padding-top: 10px;
         z-index: 9999;
     }
@@ -607,6 +604,7 @@ button {
 
     #other-caption {
         margin-top: 5px;
+        font-size: 10.5px;
     }
 
     #other-caption p {
