@@ -523,10 +523,11 @@ button {
 
     .more-info p{
         width: unset;
+        padding-inline-start: 0;
     }
 
     .more-info ul {
-        padding-inline-start: 1%;
+        padding-inline-start: 0;
     }
 
     .header-container {
