@@ -16,6 +16,7 @@
   var projects = document.querySelector(".projects");
   var other = document.querySelector(".other-container");
 
+
   function worksToggle() {
     if (projects.classList.contains("show-projects")) {
       projects.classList.toggle("show-projects");
@@ -29,7 +30,6 @@
       projects.style.zindex = "5";
     }
   };
-
 
   function infoToggle() {
     if (moreInfo.classList.contains("show-more-info")) {
